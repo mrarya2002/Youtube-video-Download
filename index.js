@@ -14,7 +14,6 @@ app.get("/download", async (req, res) => {
     const v_id = ytdl.getURLVideoID(url);
 
     const info = await ytdl.getInfo(url);
-    console.log(v_id)
 
   return res.render("download", {
     url: "https://www.youtube.com/embed/" + v_id,
